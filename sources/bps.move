@@ -46,7 +46,7 @@ public fun div(bps_x: BPS, scalar: u64): BPS {
 }
 
 /// @total is a raw value, not a BPS value.
-public fun calculate(bps: BPS, total: u64): u64 {
+public fun calc(bps: BPS, total: u64): u64 {
     let amount = ((bps.0 as u128) * (total as u128)) / (MAX_BPS as u128);
     amount as u64
 }

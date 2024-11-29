@@ -9,7 +9,7 @@
 - `sub`: Subtract two BPS structs.
 - `mul`: Multiply a BPS struct by a scalar.
 - `div`: Divide a BPS struct by a scalar.
-- `calculate`: Calculate the value of a BPS percentage from a total.
+- `calc`: Calculate the value of a BPS percentage from a total.
 - `max_bps`: It returns the maximum BPS value.
 - `value`: It returns the raw value of the BPS.
 
@@ -21,8 +21,8 @@
 
 ## Immutable
 
-[The package is immutable](https://suiscan.xyz/mainnet/tx/DQYSXsorHg8kRgFJhbvRh18uUJERSxxKFJXvQmudnGsq)
+[The package is immutable](https://suiscan.xyz/mainnet/tx/64TmEHHJgn9WMYAN2zHYb3NbSrBw6sbqPai6UdTB5wAh)
 
 ## Mainnet Code
 
-[Explorer](https://suiscan.xyz/mainnet/object/0xfc898e25dce062bd783aba30216138106f52f72d432c2d789ebe20d153d5f1f6/contracts)
+[Explorer](https://suiscan.xyz/mainnet/object/0x861a5bc378c5a4cdb8ed680c8edf6e147427f776c3b0af0002abe508c2621998/contracts)
