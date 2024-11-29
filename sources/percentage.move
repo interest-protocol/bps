@@ -4,13 +4,13 @@ module interest_bps::bps;
 
 /// 1 bpps = 0.01%
 /// 10,000 bpps = 100%
-const MAX_BPS: u64 = 10_000;
+const MAX_BPS: u64 = 10__000;
 
 // === Errors ===
 
-const EOverflow: u64 = 1;
+const EOverflow: u64 = 0;
 
-const EUnderflow: u64 = 2;
+const EUnderflow: u64 = 1;
 
 // === Structs ===
 
@@ -33,10 +33,12 @@ public fun sub(bps_x: BPS, bps_y: BPS): BPS {
     BPS(bps_x.0 - bps_y.0)
 }
 
+/// @scalar is a raw value, not a BPS value.
 public fun mul(bps_x: BPS, scalar: u64): BPS {
     BPS(assert_overflow(bps_x.0 * scalar))
 }
 
+/// @total is a raw value, not a BPS value.
 public fun calculate(bps: BPS, total: u64): u64 {
     let amount = ((bps.0 as u128) * (total as u128)) / (MAX_BPS as u128);
     amount as u64
