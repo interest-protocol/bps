@@ -70,7 +70,10 @@ fun test_mul() {
 fun test_calculate(bps: u64) {
     let total = 1_000_000;
     let bps = bps & MAX_BPS;
-    assert_eq(bps::new(bps).calculate(total), (bps * total) / MAX_BPS);
+    assert_eq(
+        bps::new(bps).calculate(total),
+        (((bps as u128) * (total as u128)) / (MAX_BPS as u128) as u64),
+    );
 }
 
 #[test, expected_failure(abort_code = bps::EOverflow)]
