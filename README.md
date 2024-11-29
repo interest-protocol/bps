@@ -4,13 +4,13 @@
 
 ### It supports the following operations:
 
-- `new`: Create a new BPS value.
-- `add`: Add two BPS values.
-- `sub`: Subtract two BPS values.
-- `mul`: Multiply a BPS value by a scalar.
-- `calculate`: Calculate the value of a BPS percentage of a total.
+- `new`: Create a new BPS struct.
+- `add`: Add two BPS structs.
+- `sub`: Subtract two BPS structs.
+- `mul`: Multiply a BPS struct by a scalar.
+- `calculate`: Calculate the value of a BPS percentage from a total.
 - `max_bps`: It returns the maximum BPS value.
-- `value`: It returns the value of the BPS.
+- `value`: It returns the raw value of the BPS.
 
 ### Error codes
 

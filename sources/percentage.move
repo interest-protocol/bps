@@ -20,8 +20,7 @@ public struct BPS(u64) has copy, drop, store;
 // === Public Mutative Functions ===
 
 public fun new(bps: u64): BPS {
-    assert_overflow(bps);
-    BPS(bps)
+    BPS(assert_overflow(bps))
 }
 
 public fun add(bps_x: BPS, bps_y: BPS): BPS {
