@@ -3,10 +3,10 @@ name = "InterestBPS"
 edition = "2024.beta" 
 license = "MIT"           
 authors = ["Jose Cerqueira (jose@interestprotocol.com)"]  
-published-at = "0x2468e935dcb65d6ab285f6c838a692f2d434b0cc1ccd2c01de2ba8e12c370df9"
+published-at = "0xfc898e25dce062bd783aba30216138106f52f72d432c2d789ebe20d153d5f1f6"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
 
 [addresses]
-interest_bps = "0x2468e935dcb65d6ab285f6c838a692f2d434b0cc1ccd2c01de2ba8e12c370df9"
+interest_bps = "0xfc898e25dce062bd783aba30216138106f52f72d432c2d789ebe20d153d5f1f6"

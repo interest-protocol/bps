@@ -66,6 +66,14 @@ fun test_mul() {
     assert_eq(bps::new(500).mul(20).value(), MAX_BPS); // 5% * 20 = 1
 }
 
+#[test]
+fun test_div() {
+    assert_eq(bps::new(100).div(100).value(), 1);
+    assert_eq(bps::new(50).div(200).value(), 0);
+    assert_eq(bps::new(0).div(200).value(), 0);
+    assert_eq(bps::new(50).div(2).value(), 25);
+}
+
 #[random_test]
 fun test_calculate(bps: u64) {
     let total = 1_000_000;
@@ -99,4 +107,10 @@ fun test_sub_underflow() {
 fun test_mul_overflow() {
     let bps_x = bps::new(5_001);
     bps_x.mul(2);
+}
+
+#[test, expected_failure(abort_code = bps::EDivideByZero)]
+fun test_div_by_zero() {
+    let bps_x = bps::new(100);
+    bps_x.div(0);
 }

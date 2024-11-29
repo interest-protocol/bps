@@ -12,6 +12,8 @@ const EOverflow: u64 = 0;
 
 const EUnderflow: u64 = 1;
 
+const EDivideByZero: u64 = 2;
+
 // === Structs ===
 
 /// A struct to represent a percentage in basis points (bps).
@@ -35,6 +37,12 @@ public fun sub(bps_x: BPS, bps_y: BPS): BPS {
 /// @scalar is a raw value, not a BPS value.
 public fun mul(bps_x: BPS, scalar: u64): BPS {
     BPS(assert_overflow(bps_x.0 * scalar))
+}
+
+/// @scalar is a raw value, not a BPS value.
+public fun div(bps_x: BPS, scalar: u64): BPS {
+    assert!(scalar != 0, EDivideByZero);
+    BPS(bps_x.0 / scalar)
 }
 
 /// @total is a raw value, not a BPS value.
