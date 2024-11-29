@@ -26,5 +26,3 @@
 ## Mainnet Code
 
 [Explorer](https://suiscan.xyz/mainnet/object/0xfc898e25dce062bd783aba30216138106f52f72d432c2d789ebe20d153d5f1f6/contracts)
-
-sui client call --package 0x2 --module package --gas-budget 50000000 --function make_immutable --args 0xd65c475d636fb4fb5c4c3e726a765a13f9e556ed6f12806a72752bd7a1f82ef3
