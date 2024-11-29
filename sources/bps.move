@@ -4,7 +4,7 @@ module interest_bps::bps;
 
 /// 1 bps = 0.01%
 /// 10,000 bps = 100%
-const MAX_BPS: u64 = 10__000;
+const MAX_BPS: u64 = 10_000;
 
 // === Errors ===
 
