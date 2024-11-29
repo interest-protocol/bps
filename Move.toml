@@ -10,6 +10,3 @@ Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-fram
 
 [addresses]
 interest_bps = "0x861a5bc378c5a4cdb8ed680c8edf6e147427f776c3b0af0002abe508c2621998"
-
-
-# 0xd2c1797e931e5ca5668e8ef5c930e3e969bf1a07f0312792f56eee939d10bdd4
