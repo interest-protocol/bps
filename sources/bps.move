@@ -45,9 +45,27 @@ public fun div(bps_x: BPS, scalar: u64): BPS {
     BPS(bps_x.0 / scalar)
 }
 
+/// @scalar is a raw value, not a BPS value.
+public fun div_up(bps_x: BPS, scalar: u64): BPS {
+    assert!(scalar != 0, EDivideByZero);
+    BPS(if (bps_x.0 == 0) 0 else 1 + (bps_x.0 - 1) / scalar)
+}
+
+
 /// @total is a raw value, not a BPS value.
+/// It rounds down to the nearest integer.
 public fun calc(bps: BPS, total: u64): u64 {
     let amount = ((bps.0 as u128) * (total as u128)) / (MAX_BPS as u128);
+    amount as u64
+}
+
+/// @total is a raw value, not a BPS value.
+/// It rounds up to the nearest integer.
+public fun calc_up(bps: BPS, total: u64): u64 {
+    let (x, y, z) = (bps.0 as u128, total as u128, MAX_BPS as u128);
+
+    let amount = ((x * y) / z) + if ((x * y) % z > 0) 1 else 0;
+
     amount as u64
 }
 

@@ -72,16 +72,28 @@ fun test_div() {
     assert_eq!(bps::new(50).div(200).value(), 0);
     assert_eq!(bps::new(0).div(200).value(), 0);
     assert_eq!(bps::new(50).div(2).value(), 25);
+    assert_eq!(bps::new(43).div(13).value(), 3);
+}
+
+#[test]
+fun test_div_up() {
+    assert_eq!(bps::new(43).div_up(13).value(), 4);
 }
 
 #[random_test]
-fun test_calculate(bps: u64) {
+fun test_calc(bps: u64) {
     let total = 1_000_000;
     let bps = bps & MAX_BPS;
     assert_eq!(
         bps::new(bps).calc(total),
         (((bps as u128) * (total as u128)) / (MAX_BPS as u128) as u64),
     );
+    assert_eq!(bps::new(3333).calc(1000), 333);
+}
+
+#[test]
+fun test_calc_up() {
+    assert_eq!(bps::new(3333).calc_up(1000), 334);
 }
 
 #[test, expected_failure(abort_code = bps::EOverflow)]
