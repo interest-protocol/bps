@@ -19,10 +19,6 @@
 - `EUnderflow`: It is raised when you try to subtract a BPS value from a smaller BPS value.
 - `EDivideByZero`: It is raised when you try to divide by zero.
 
-## Immutable
-
-[The package is immutable](https://suiscan.xyz/mainnet/tx/EAaXc6j9ET2cbDt5JERBQV1A4dNzW17TENgeqtisEAwc)
-
 ## Mainnet Code
 
-[Explorer](https://suiscan.xyz/mainnet/object/0xdd7e07fc30acb942fc757ff732d1b4db104e0aba9717133b4eac82260dcd9f18/contracts)
+[Explorer](https://testnet.suivision.xyz/package/0x184c9f89d7a2ae4533cf04fa457b082769d227f9b8e63ec81921cb2abe0f882e?tab=Code)
